@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_event"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/teal_200"
+    android:layout_margin="16dp"
+    android:padding="16dp">
+
+    <!-- Name -->
+    <TextView
+        android:id="@+id/textViewNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Naziv:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/textViewNameValue"
+        android:layout_marginEnd="8dp"
+        />
+
+    <TextView
+        android:id="@+id/textViewNameValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textViewNameLabel"
+        app:layout_constraintTop_toTopOf="@id/textViewNameLabel" />
+
+    <!-- Description -->
+    <TextView
+        android:id="@+id/textViewDescriptionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Opis:"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewNameLabel"
+        app:layout_constraintEnd_toStartOf="@id/textViewDescriptionValue"
+        android:layout_marginEnd="8dp"
+        />
+
+    <TextView
+        android:id="@+id/textViewDescriptionValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textViewDescriptionLabel"
+        app:layout_constraintTop_toTopOf="@id/textViewDescriptionLabel" />
+
+    <!-- Location -->
+    <TextView
+        android:id="@+id/textViewLocationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lokacija:"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewDescriptionLabel"
+        app:layout_constraintEnd_toStartOf="@id/textViewLocationValue"
+        android:layout_marginEnd="8dp"
+        />
+
+    <TextView
+        android:id="@+id/textViewLocationValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textViewLocationLabel"
+        app:layout_constraintTop_toTopOf="@id/textViewLocationLabel" />
+
+    <!-- Date -->
+    <TextView
+        android:id="@+id/textViewDateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Datum:"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewLocationLabel"
+        app:layout_constraintEnd_toStartOf="@id/textViewDateValue"
+        android:layout_marginEnd="8dp"
+        />
+
+    <TextView
+        android:id="@+id/textViewDateValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textViewDateLabel"
+        app:layout_constraintTop_toTopOf="@id/textViewDateLabel" />
+
+    <!-- Delete Icon -->
+    <ImageView
+        android:id="@+id/imageViewDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/delete_kanta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewDateLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

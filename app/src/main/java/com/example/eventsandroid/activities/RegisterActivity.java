@@ -20,7 +20,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class RegisterActivity extends AppCompatActivity {
+public class RegisterActivity extends BaseActivity {
 
     private EditText usernameEditText;
     private EditText passwordEditText;
@@ -31,7 +31,7 @@ public class RegisterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        getLayoutInflater().inflate(R.layout.activity_register, findViewById(R.id.content_frame));
 
         usernameEditText = findViewById(R.id.username);
         passwordEditText = findViewById(R.id.password);
@@ -53,7 +53,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         AuthRequest registerRequest = new AuthRequest(username, password);
 
-        ApiService apiService = ApiClient.getRetrofitInstance().create(ApiService.class);
+        ApiService apiService = ApiClient.getRetrofitInstance(this).create(ApiService.class);
         Call<JwtResponse> call = apiService.register(registerRequest);
 
         call.enqueue(new Callback<JwtResponse>() {

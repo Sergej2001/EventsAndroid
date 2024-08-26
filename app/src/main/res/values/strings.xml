@@ -3,5 +3,14 @@
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
-    <string name="register">register</string>
+    <string name="register">Register</string>
+    <string name="navigation_drawer_open">Open drawer</string>
+    <string name="navigation_drawer_close">Close drawer</string>
+    <string name="dodaj_dogadjaj">Dodaj dogadjaj</string>
+    <string name="sacuvaj">Sacuvaj</string>
+    <string name="datum">Datum:</string>
+    <string name="lokacija">Lokacija:</string>
+    <string name="opis">Opis:</string>
+    <string name="naziv_dogadjaja">Naziv:</string>
+    <string name="sa_uvaj_izmene">Sačuvaj izmene</string>
 </resources>

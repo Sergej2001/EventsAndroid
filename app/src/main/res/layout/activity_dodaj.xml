@@ -1,0 +1,40 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextEventName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/naziv_dogadjaja" />
+
+    <EditText
+        android:id="@+id/editTextEventDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/opis" />
+
+    <EditText
+        android:id="@+id/editTextEventLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/lokacija" />
+
+    <EditText
+        android:id="@+id/editTextEventDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/datum"
+        android:focusable="false"
+        android:clickable="true" />
+
+    <Button
+        android:id="@+id/btnSaveEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sacuvaj" />
+
+</LinearLayout>
