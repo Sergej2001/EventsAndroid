@@ -22,6 +22,9 @@ public interface ApiService {
     @POST("api/auth/signup")
     Call<JwtResponse> register(@Body AuthRequest registerRequest);
 
+    @GET("api/auth/validateToken")
+    Call<String> validateToken();
+
     @GET("events/all")
     Call<List<Event>> getAllEvents();
 

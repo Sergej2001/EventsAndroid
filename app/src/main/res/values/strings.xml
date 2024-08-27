@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">EventsAndroid</string>
+    <string name="app_name">Dogadjaji u Beogradu</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
@@ -13,4 +13,8 @@
     <string name="opis">Opis:</string>
     <string name="naziv_dogadjaja">Naziv:</string>
     <string name="sa_uvaj_izmene">Sačuvaj izmene</string>
+    <string name="dogadjaji">Dogadjaji</string>
+    <string name="prijavi_se">Prijavi se</string>
+    <string name="registruj_se">Registruj se</string>
+    <string name="odjavi_se">Odjavi se</string>
 </resources>

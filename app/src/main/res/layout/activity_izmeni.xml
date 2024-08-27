@@ -5,7 +5,6 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- Label for Event Name -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -13,7 +12,6 @@
         android:textSize="14sp"
         android:textColor="@android:color/black" />
 
-    <!-- Event Name EditText -->
     <EditText
         android:id="@+id/editTextEventName"
         android:layout_width="match_parent"
@@ -21,7 +19,6 @@
         android:textSize="16sp"
         android:inputType="text" />
 
-    <!-- Label for Event Description -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,7 +27,6 @@
         android:textColor="@android:color/black"
         android:layout_marginTop="8dp" />
 
-    <!-- Event Description EditText -->
     <EditText
         android:id="@+id/editTextEventDescription"
         android:layout_width="match_parent"
@@ -38,7 +34,6 @@
         android:textSize="16sp"
         android:inputType="text" />
 
-    <!-- Label for Event Location -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -47,7 +42,6 @@
         android:textColor="@android:color/black"
         android:layout_marginTop="8dp" />
 
-    <!-- Event Location EditText -->
     <EditText
         android:id="@+id/editTextEventLocation"
         android:layout_width="match_parent"
@@ -55,7 +49,6 @@
         android:textSize="16sp"
         android:inputType="text" />
 
-    <!-- Label for Event Date -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -64,7 +57,6 @@
         android:textColor="@android:color/black"
         android:layout_marginTop="8dp" />
 
-    <!-- Event Date EditText -->
     <EditText
         android:id="@+id/editTextEventDate"
         android:layout_width="match_parent"
@@ -72,7 +64,6 @@
         android:textSize="16sp"
         android:inputType="date" />
 
-    <!-- Save Button -->
     <Button
         android:id="@+id/btnSaveEvent"
         android:layout_width="match_parent"

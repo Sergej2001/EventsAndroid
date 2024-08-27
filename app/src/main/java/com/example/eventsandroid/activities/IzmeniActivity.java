@@ -37,26 +37,21 @@ public class IzmeniActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_izmeni);
 
-        // Initialize views
         editTextEventName = findViewById(R.id.editTextEventName);
         editTextEventDescription = findViewById(R.id.editTextEventDescription);
         editTextEventLocation = findViewById(R.id.editTextEventLocation);
         editTextEventDate = findViewById(R.id.editTextEventDate);
         btnSaveEvent = findViewById(R.id.btnSaveEvent);
 
-        // Initialize ApiService
         apiService = ApiClient.getRetrofitInstance(this).create(ApiService.class);
 
-        // Retrieve event ID from intent
         long eventId = getIntent().getLongExtra("event_id", -1);
         if (eventId != -1) {
             loadEvent(eventId);
         }
 
-        // Set up DatePickerDialog for date selection
         editTextEventDate.setOnClickListener(v -> showDatePickerDialog());
 
-        // Set up save button click listener
         btnSaveEvent.setOnClickListener(v -> saveEvent());
     }
 
@@ -124,13 +119,11 @@ public class IzmeniActivity extends AppCompatActivity {
             return;
         }
 
-        // Update the event object
         event.setName(eventName);
         event.setDescription(eventDescription);
         event.setLocation(eventLocation);
         event.setDate(date);
 
-        // Save the updated event to the backend
         Call<Event> call = apiService.updateEvent(event.getId(), event);
         call.enqueue(new Callback<Event>() {
             @Override
@@ -139,7 +132,7 @@ public class IzmeniActivity extends AppCompatActivity {
                     Toast.makeText(IzmeniActivity.this, "Događaj uspešno izmenjen!", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(IzmeniActivity.this, MainActivity.class);
                     startActivity(intent);
-                    finish(); // Close the activity
+                    finish();
                 } else {
                     Toast.makeText(IzmeniActivity.this, "Greška prilikom izmene događaja", Toast.LENGTH_SHORT).show();
                 }

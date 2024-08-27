@@ -1,27 +1,20 @@
 package com.example.eventsandroid.activities;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.example.eventsandroid.R;
 
 import android.app.DatePickerDialog;
-import android.os.Bundle;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import com.example.eventsandroid.R;
 import com.example.eventsandroid.models.Event;
 import com.example.eventsandroid.models.User;
 import com.example.eventsandroid.services.ApiClient;
@@ -46,21 +39,17 @@ public class DodajActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dodaj);
 
-        // Initialize SharedPreferences and ApiService
         sharedPreferences = getSharedPreferences("app_prefs", MODE_PRIVATE);
         apiService = ApiClient.getRetrofitInstance(this).create(ApiService.class);
 
-        // Initialize EditText fields
         editTextEventName = findViewById(R.id.editTextEventName);
         editTextEventDescription = findViewById(R.id.editTextEventDescription);
         editTextEventLocation = findViewById(R.id.editTextEventLocation);
         editTextEventDate = findViewById(R.id.editTextEventDate);
 
-        // Initialize Save Button
         Button btnSaveEvent = findViewById(R.id.btnSaveEvent);
         btnSaveEvent.setOnClickListener(v -> saveEvent());
 
-        // Set up DatePickerDialog
         editTextEventDate.setOnClickListener(v -> showDatePickerDialog());
     }
 
@@ -101,10 +90,8 @@ public class DodajActivity extends AppCompatActivity {
             return;
         }
 
-        // Get current user's username from SharedPreferences
         String username = sharedPreferences.getString("username", "");
 
-        // Fetch user details and create event
         fetchUserAndCreateEvent(username, eventName, eventDescription, eventLocation, date);
     }
 
@@ -143,6 +130,8 @@ public class DodajActivity extends AppCompatActivity {
             public void onResponse(Call<Event> call, Response<Event> response) {
                 if (response.isSuccessful()) {
                     Toast.makeText(DodajActivity.this, "Događaj uspešno sačuvan!", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(DodajActivity.this, MainActivity.class);
+                    startActivity(intent);
                     finish();
                 } else {
                     Toast.makeText(DodajActivity.this, event.getCreatedBy().toString(), Toast.LENGTH_SHORT).show();

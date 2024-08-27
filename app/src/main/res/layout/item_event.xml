@@ -8,108 +8,145 @@
     android:layout_margin="16dp"
     android:padding="16dp">
 
-    <!-- Name -->
+    <!-- ImageView for displaying the image on the left side of the screen -->
+    <ImageView
+        android:id="@+id/imageViewEvent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guidelineVertical"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.33" />
+
+    <!-- Guideline to split the screen -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.34564644" />
+
+    <!-- Text and labels on the right side -->
     <TextView
         android:id="@+id/textViewNameLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Naziv:"
-        android:textSize="16sp"
+        android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guidelineVertical"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/textViewNameValue"
-        android:layout_marginEnd="8dp"
-        />
+        android:layout_marginStart="16dp" />
 
     <TextView
         android:id="@+id/textViewNameValue"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/textViewNameLabel"
-        app:layout_constraintTop_toTopOf="@id/textViewNameLabel" />
+        app:layout_constraintTop_toTopOf="@id/textViewNameLabel"
+        android:layout_marginStart="16dp" />
 
-    <!-- Description -->
     <TextView
         android:id="@+id/textViewDescriptionLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Opis:"
-        android:textSize="14sp"
+        android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guidelineVertical"
         app:layout_constraintTop_toBottomOf="@id/textViewNameLabel"
-        app:layout_constraintEnd_toStartOf="@id/textViewDescriptionValue"
-        android:layout_marginEnd="8dp"
-        />
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp" />
 
     <TextView
         android:id="@+id/textViewDescriptionValue"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textSize="14sp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/textViewDescriptionLabel"
-        app:layout_constraintTop_toTopOf="@id/textViewDescriptionLabel" />
+        app:layout_constraintTop_toTopOf="@id/textViewDescriptionLabel"
+        android:layout_marginStart="16dp" />
 
-    <!-- Location -->
     <TextView
         android:id="@+id/textViewLocationLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Lokacija:"
-        android:textSize="12sp"
+        android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guidelineVertical"
         app:layout_constraintTop_toBottomOf="@id/textViewDescriptionLabel"
-        app:layout_constraintEnd_toStartOf="@id/textViewLocationValue"
-        android:layout_marginEnd="8dp"
-        />
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp" />
 
     <TextView
         android:id="@+id/textViewLocationValue"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/textViewLocationLabel"
-        app:layout_constraintTop_toTopOf="@id/textViewLocationLabel" />
+        app:layout_constraintTop_toTopOf="@id/textViewLocationLabel"
+        android:layout_marginStart="16dp" />
 
-    <!-- Date -->
     <TextView
         android:id="@+id/textViewDateLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Datum:"
-        android:textSize="12sp"
+        android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guidelineVertical"
         app:layout_constraintTop_toBottomOf="@id/textViewLocationLabel"
-        app:layout_constraintEnd_toStartOf="@id/textViewDateValue"
-        android:layout_marginEnd="8dp"
-        />
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp" />
 
     <TextView
         android:id="@+id/textViewDateValue"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/textViewDateLabel"
-        app:layout_constraintTop_toTopOf="@id/textViewDateLabel" />
+        app:layout_constraintTop_toTopOf="@id/textViewDateLabel"
+        android:layout_marginStart="16dp" />
 
-    <!-- Delete Icon -->
+    <TextView
+        android:id="@+id/textViewAuthorLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Autor:"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/guidelineVertical"
+        app:layout_constraintTop_toBottomOf="@id/textViewDateValue"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/textViewAuthorValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textViewAuthorLabel"
+        app:layout_constraintTop_toTopOf="@id/textViewAuthorLabel"
+        android:layout_marginStart="16dp" />
+
     <ImageView
         android:id="@+id/imageViewDelete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/delete_kanta"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewDateLabel"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/textViewAuthorLabel"
+        app:layout_constraintStart_toStartOf="@id/guidelineVertical"
+        android:layout_marginTop="16dp"
         app:layout_constraintHorizontal_bias="0.5"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,7 +21,6 @@
         android:layout_height="30dp"
         android:text="@string/dodaj_dogadjaj" />
 
-    <!-- Vaš specifičan sadržaj, npr. RecyclerView -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
