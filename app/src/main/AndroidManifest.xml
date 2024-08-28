@@ -22,7 +22,7 @@
             android:exported="false" />
         <activity
             android:name=".activities.BaseActivity"
-            android:exported="false" /> <!-- Mark LoginActivity as the launcher activity -->
+            android:exported="false" />
         <activity
             android:name=".activities.LoginActivity"
             android:exported="false" />
